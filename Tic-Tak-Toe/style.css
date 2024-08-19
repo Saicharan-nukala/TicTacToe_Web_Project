@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+/* Custom Font Face */
+@font-face {
+    font-family: 'gamefont';
+    src: url('game2.TTF') format('truetype'); /* Specify format */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Styling for navigation */
+nav ul {
+    list-style-type: none;
+}
+
+/* Body styling */
+body {
+    margin: 5px;
+    background-color: black;
+}
+
+/* Navigation bar styling */
+nav {
+    background-color: rgba(139, 255, 0, 0.8); /* Added rgba for transparency */
+    color: black;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-style: normal;
+    font-family: 'gamefont', sans-serif; /* Fallback font */
+}
+
+/* Game section styling */
+.game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.game_box {
+    margin: 20px;
+    height: 600px;
+    width: 500px;
+    background-color: black;
+    border: 2px solid gray;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px gray;
+}
+
+.game_grid {
+    margin-top: 40px;
+    display: grid;
+    justify-content: center;
+    grid-template-rows: repeat(3, 9.5vw);
+    grid-template-columns: repeat(3, 9.5vw);
+}
+
+.box {
+    border: 3px dotted gray;
+    font-size: 7vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover {
+    background-color: rgba(139, 255, 0, 0.1); /* Added rgba for transparency */
+    cursor: pointer;
+}
+
+/* Removing specific borders */
+.box.br0 { border-right: 0; }
+.box.bt0 { border-top: 0; }
+.box.bb0 { border-bottom: 0; }
+.box.bl0 { border-left: 0; }
+
+.ginfo {
+    margin: 10px;
+}
+
+.gn {
+    font-size: 2rem;
+    color: #8bff00cf;
+    margin-bottom: 20px;
+}
+
+/* Responsive design for different screen sizes */
+@media (max-width: 1000px) {
+    .game_grid {
+        grid-template-rows: repeat(3, 13vw);
+        grid-template-columns: repeat(3, 13vw);
+    }
+}
+
+@media (max-width: 800px) {
+    .game_grid {
+        grid-template-rows: repeat(3, 17vw);
+        grid-template-columns: repeat(3, 17vw);
+    }
+    nav {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .game_grid {
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+    nav {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .game_grid {
+        grid-template-rows: repeat(3, 22vw);
+        grid-template-columns: repeat(3, 22vw);
+    }
+    nav {
+        font-size: 1.5rem;
+    }
+}
+
+/* Button styling in .ginfo */
+.ginfo button {
+    background-color: #8bff00cf; /* Bright green */
+    color: black;
+    font-family: 'Ubuntu', sans-serif; /* Font family */
+    font-size: 10px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 15px;
+    margin-left: 20px;
+}
+
+.ginfo button:hover {
+    background-color: #e74c3c;
+    cursor: pointer;
+}
+
+.ginfo button:active {
+    box-shadow: 0 2px #c0392b;
+    transform: translateY(2px); /* Changed translateZ to translateY */
+}
+
+.ginfo div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
